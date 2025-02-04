@@ -5,12 +5,21 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background01"
     tools:context=".MainActivity">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <!-- Гридлейаут для размещения 12 изображений -->
         <GridLayout
@@ -25,64 +34,73 @@
                 android:id="@+id/image_1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/image1"/>
+                android:src="@drawable/image1" />
 
             <ImageView
                 android:id="@+id/image_2"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/image2"/>
+                android:src="@drawable/image2" />
 
             <ImageView
                 android:id="@+id/image_3"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/image3"/>
+                android:src="@drawable/image3" />
+
             <ImageView
                 android:id="@+id/image_4"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/image4"/>
+                android:src="@drawable/image4" />
+
             <ImageView
                 android:id="@+id/image_5"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/image5"/>
+                android:src="@drawable/image5" />
+
             <ImageView
                 android:id="@+id/image_6"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/image6"/>
+                android:src="@drawable/image6" />
+
             <ImageView
                 android:id="@+id/image_7"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/image7"/>
+                android:src="@drawable/image7" />
+
             <ImageView
                 android:id="@+id/image_8"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/image8"/>
+                android:src="@drawable/image8" />
+
             <ImageView
                 android:id="@+id/image_9"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/image9"/>
+                android:src="@drawable/image9" />
+
             <ImageView
                 android:id="@+id/image_10"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/image10"/>
+                android:src="@drawable/image10" />
+
             <ImageView
                 android:id="@+id/image_11"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/image11"/>
+                android:src="@drawable/image11" />
+
             <ImageView
                 android:id="@+id/image_12"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/image12"/>
+                android:src="@drawable/image12" />
 
         </GridLayout>
     </LinearLayout>

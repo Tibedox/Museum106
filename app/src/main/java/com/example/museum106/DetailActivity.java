@@ -9,6 +9,11 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
 public class DetailActivity extends AppCompatActivity {
 
     @Override
@@ -26,8 +31,10 @@ public class DetailActivity extends AppCompatActivity {
         Drawable drawable = getResources().getDrawable(resourceId);
         detailImage.setImageDrawable(drawable);
 
-        // Устанавливаем длинный текст
-        detailText.setText(getLongText());
+        // Загружаем текст из файла
+        String fileName = "text" + imageName.substring(5) + ".txt"; // Формируем имя файла
+        String longText = readFileFromAssets(fileName);
+        detailText.setText(longText);
 
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,7 +44,19 @@ public class DetailActivity extends AppCompatActivity {
         });
     }
 
-    private String getLongText() {
-        return "Здесь может быть ваш текст длиной более 3000 символов...";
+    private String readFileFromAssets(String fileName) {
+        StringBuilder stringBuilder = new StringBuilder();
+        try {
+            InputStream is = getAssets().open(fileName);
+            BufferedReader br = new BufferedReader(new InputStreamReader(is));
+            String line;
+            while ((line = br.readLine()) != null) {
+                stringBuilder.append(line).append("\n");
+            }
+            br.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return stringBuilder.toString();
     }
 }
