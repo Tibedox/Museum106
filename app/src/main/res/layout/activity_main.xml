@@ -7,13 +7,84 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Гридлейаут для размещения 12 изображений -->
+        <GridLayout
+            android:id="@+id/grid_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="4">
+
+            <!-- 12 ImageViews -->
+            <ImageView
+                android:id="@+id/image_1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/image1"/>
+
+            <ImageView
+                android:id="@+id/image_2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/image2"/>
+
+            <ImageView
+                android:id="@+id/image_3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/image3"/>
+            <ImageView
+                android:id="@+id/image_4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/image4"/>
+            <ImageView
+                android:id="@+id/image_5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/image5"/>
+            <ImageView
+                android:id="@+id/image_6"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/image6"/>
+            <ImageView
+                android:id="@+id/image_7"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/image7"/>
+            <ImageView
+                android:id="@+id/image_8"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/image8"/>
+            <ImageView
+                android:id="@+id/image_9"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/image9"/>
+            <ImageView
+                android:id="@+id/image_10"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/image10"/>
+            <ImageView
+                android:id="@+id/image_11"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/image11"/>
+            <ImageView
+                android:id="@+id/image_12"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/image12"/>
+
+        </GridLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
